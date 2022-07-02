@@ -1,55 +1,98 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-  
+// import { purple, green, orange, deepOrange } from "@mui/material/styles/colors";
+
+// Global styles can be moved to a separate file for ease of maintenance.
+const global = {
+    textRight: {
+        textAlign: "right",
+    },
+    mygrey: "rgba(0, 0, 0, 0.5)",
+};
+
+export const dark = () => (createTheme({
+    palette: {
+        type: 'dark',
+        primary: {
+        main: "#040f3d",
+        },
+        secondary: {
+        main: "#757575",
+        },
+    },
+    typography: {
+        button: {
+            textTransform: "none",
+        },
+    }
+}))
+
+export const light = ()=> (createTheme({
+    palette: {
+        type: 'light',
+        primary: {
+        main: "#4bffa5",
+        },
+        secondary: {
+        main: "#040f3d",
+        },
+    },
+    typography: {
+        button: {
+            textTransform: "none",
+        },
+    }
+}))
+
+
 const theme = responsiveFontSizes(createTheme({
-  spacing: 4,
-  typography: {
-    fontFamily: [
-      'Roboto',
-      'Raleway',
-      'Open Sans',
-    ].join(','),
-    h1: {
-      fontSize: '5rem',
-      fontFamily: 'Raleway',
+    spacing: 4,
+    typography: {
+        fontFamily: [
+            'Roboto',
+            'Raleway',
+            'Open Sans',
+            ].join(','),
+        h1: {
+            fontSize: '5rem',
+            fontFamily: 'Raleway',
+        },
+        h2: {
+            fontSize: '3.5rem',
+            fontFamily: 'Open Sans',
+            fontStyle: 'bold',
+        },
+        h3: {
+            fontSize: '2.5rem',
+            fontFamily: 'Roboto',
+        },
     },
-    h2: {
-      fontSize: '3.5rem',
-      fontFamily: 'Open Sans',
-      fontStyle: 'bold',
+    palette: {
+        background: {
+            default: '#009900'//green
+        },
+        primary: {
+            main: '#2B37D4',//indigo
+        },
+        secondary: {
+            main: '#E769A6',//pink
+        },
+        error: {
+            main: '#D72A2A',//red
+        },
+        warning: {
+            main: '#FC7B09',//orange
+        },
+        info: {
+            main: '#6B7D6A',//gray
+        },
+        success: {
+            main: '#09FE00',//green
+        },
+        text: {
+            primary: '#000000',//black
+            secondary: '#FFFFFF',//white
+        },
     },
-    h3: {
-      fontSize: '2.5rem',
-      fontFamily: 'Roboto',
-    },
-  },
-  palette: {
-    background: {
-      default: '#009900'//green
-    },
-    primary: {
-      main: '#2B37D4',//indigo
-    },
-    secondary: {
-      main: '#E769A6',//pink
-    },
-    error: {
-      main: '#D72A2A',//red
-    },
-    warning: {
-      main: '#FC7B09',//orange
-    },
-    info: {
-      main: '#6B7D6A',//gray
-    },
-    success: {
-      main: '#09FE00',//green
-    },
-    text: {
-      primary: '#000000',//black
-      secondary: '#FFFFFF',//white
-    },
-  },
 }));
-  
-  
+
 export default theme;
