@@ -9,12 +9,12 @@ import "fontsource-roboto";
 // import { SharedComp, ComplexShared } from "./components";
 
 /* Router */
-import { Router } from "react-router-dom";
+// import { Router } from "react-router-dom";
 import { RouterConfig } from "./navigation/RouterConfig";
 
 /* MUI Theme */
 import { ThemeProvider } from "@mui/material";
-import { Typography } from "@mui/material";
+// import { Typography } from "@mui/material";
 import { ThemeSwitch } from "./components/ThemeSwitch";
 import { dark, light } from "./styles/Theme";
 import "./App.css";
@@ -35,9 +35,7 @@ function App() {
             darkState={darkState}
             handleThemeChange={handleThemeChange}
           />
-          <Router>
-            <RouterConfig/>
-          </Router>
+          <RouterConfig/>
         </ThemeProvider>
     </React.Fragment>
     

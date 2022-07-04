@@ -8,20 +8,11 @@ import {ROOT, DASHBOARD} from "./Constants"
 export const RouterConfig = () => {
     return (
         <Routes>
-            <Route exact path={ROOT} element={<HomeContainer/>}/>
-            <Route exact path={DASHBOARD} element={<DashboardContainer/>}/>
-
-            {/*<Route exact path={ROOT}>
-                <Home/>    
-            </Route>
-            <Route exact path={DASHBOARD}>
-                <Dashboard/>
-            </Route>*/}
+            <Route path={ROOT} element={<HomeContainer/>}/>
+            <Route path={DASHBOARD} element={<DashboardContainer/>}/>
 
             {/* 404 page not found will redirect to Home Screen*/}
-            <Route path="*">
-                <NotFound/>
-            </Route>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     )
 }
